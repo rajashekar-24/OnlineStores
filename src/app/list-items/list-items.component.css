@@ -1,0 +1,38 @@
+.card{
+    width: 10rem;
+}
+
+.card-img{
+    width:158px; 
+    height:200px; 
+    background-position:center;
+}
+
+.truncate {
+    width: 100px;
+    white-space: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sizes{
+      border-radius: 150px;
+      text-align: center;
+  }
+
+  .cart{
+    
+      font-size:40px;
+      color:#007bff;
+      
+      text-align: center;
+  }
+  .cart-icon{
+      padding: 0.35rem;
+  }
+
+  .custom-select{
+      width: 12rem;
+  }
+
+  .active{background-color: #66a1e6 !important}

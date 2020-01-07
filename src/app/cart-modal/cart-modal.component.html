@@ -1,0 +1,25 @@
+<div>
+    <button class="btn btn-light float-right" (click)="close()">X</button>
+</div>
+<div *ngIf="items.length"> 
+    <h3>Cart Items</h3> 
+    <p class="mb-2">{{items.length}} Product(s) found.</p>
+    <!-- List of items -->
+    <ul class="list-group" *ngFor="let item of items">
+        <li class="list-group-item">
+            <button class="btn btn-danger float-right" (click)="removeItemInCart(item.id)">
+                <i class="fa fa-trash "></i></button>
+            <img class="card-img" [src]="item.image" alt="">
+            <p>{{item.name}}</p>
+            <p class="card-text">{{item.price | currency: INR}}</p>
+        </li>
+    </ul>
+    <div class="mt-2">
+        <button class="btn btn-primary" (click)="checkOutAll(items)">CheckOut All Cart Items</button>
+    </div>
+</div>
+
+
+<div *ngIf="items.length==0" class="float-center ">
+   <h4>No items added to cart</h4>
+</div>
